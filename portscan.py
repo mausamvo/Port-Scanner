@@ -4,6 +4,7 @@ import socket
 
 #create the socket object
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 	#AF_INET explains i'm using ipv4 addr, STREAM explain i'm using TCP packets
+socket.setdefaulttimeout(2) 					#expires in 2
 #trying to perform a three-way handshake
 
 host = raw_input("[*] Enter the host to scan: ")
